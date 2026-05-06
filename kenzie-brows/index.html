@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kenzie Brows | Permanent Makeup &amp; Esthetics in Salt Lake City</title>
+  <meta name="description" content="Kenzie Brows — permanent makeup, microblading, nano brows, lip blush, lash lifts and brow lamination in Salt Lake City, Utah. Book online.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink:       #2A2826;
+      --charcoal:  #363636;
+      --cream:     #FAF7F2;
+      --cream-dk:  #F1ECE3;
+      --peach:     #E5BFA8;
+      --peach-dk:  #C99A82;
+      --line:      #1F1D1B;
+      --muted:     #8A847E;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--cream);
+      color: var(--ink);
+      font-size: 16px;
+      line-height: 1.65;
+      font-weight: 300;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* sparkle SVG (used across the page as a brand mark) */
+    .star {
+      display: inline-block;
+      width: 14px; height: 14px;
+      vertical-align: middle;
+      margin: 0 6px;
+    }
+
+    /* ─── NAV ─── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 22px 56px;
+      background: rgba(250, 247, 242, 0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(42, 40, 38, 0.06);
+    }
+
+    .nav-logo {
+      font-family: 'DM Serif Display', serif;
+      font-size: 22px;
+      font-weight: 400;
+      color: var(--ink);
+      letter-spacing: -0.005em;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 36px;
+    }
+
+    .nav-link {
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink);
+      transition: opacity 200ms;
+    }
+    .nav-link:hover { opacity: 0.6; }
+
+    .nav-book {
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--cream);
+      background: var(--ink);
+      padding: 12px 24px;
+      transition: background 200ms;
+    }
+    .nav-book:hover { background: var(--peach-dk); }
+
+    /* ─── HERO ─── */
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      padding-top: 76px;
+    }
+
+    .hero-text {
+      padding: 80px 72px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background: var(--cream);
+      position: relative;
+    }
+
+    .hero-text::before {
+      content: '';
+      position: absolute;
+      top: 120px; left: 72px;
+      width: 64px; height: 1px;
+      background: var(--ink);
+    }
+
+    .hero-eyebrow {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--ink);
+      margin-bottom: 64px;
+      padding-top: 28px;
+    }
+
+    .hero-logo {
+      max-width: 480px;
+      width: 80%;
+      margin-bottom: 36px;
+    }
+
+    .hero-tagline {
+      font-family: 'DM Serif Display', serif;
+      font-style: italic;
+      font-size: 28px;
+      font-weight: 400;
+      line-height: 1.3;
+      color: var(--ink);
+      margin-bottom: 28px;
+      letter-spacing: -0.005em;
+    }
+
+    .hero-sub {
+      font-size: 17px;
+      line-height: 1.65;
+      color: var(--ink);
+      max-width: 460px;
+      margin-bottom: 48px;
+      font-weight: 300;
+    }
+
+    .hero-cta-row {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--cream);
+      background: var(--ink);
+      padding: 18px 36px;
+      transition: background 200ms;
+    }
+    .btn-primary:hover { background: var(--peach-dk); }
+
+    .btn-link {
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink);
+      border-bottom: 1px solid var(--ink);
+      padding-bottom: 4px;
+      transition: opacity 200ms;
+    }
+    .btn-link:hover { opacity: 0.6; }
+
+    /* hero portrait */
+    .hero-image {
+      background:
+        linear-gradient(160deg, rgba(229,191,168,0.18), rgba(42,40,38,0.08)),
+        var(--cream-dk);
+      position: relative;
+      min-height: 600px;
+      overflow: hidden;
+    }
+    /* PHOTO SLOT — Kenzie's portrait, ideally a large editorial shot:
+       background: url('assets/kenzie-portrait.jpg') center/cover no-repeat; */
+    .hero-image::after {
+      content: 'photo: Kenzie portrait';
+      position: absolute;
+      bottom: 32px;
+      left: 32px;
+      font-size: 12px;
+      letter-spacing: 0.05em;
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    /* ─── INTRO STRIP ─── */
+    .intro-strip {
+      background: var(--ink);
+      color: var(--cream);
+      padding: 80px 72px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+    }
+    .intro-strip span {
+      font-family: 'DM Serif Display', serif;
+      font-style: italic;
+      font-size: clamp(26px, 3vw, 38px);
+      font-weight: 400;
+      letter-spacing: -0.01em;
+    }
+    .intro-strip .star path { fill: var(--peach); }
+
+    /* ─── SECTION SHELL ─── */
+    section { padding: 130px 72px; }
+
+    .container { max-width: 1180px; margin: 0 auto; }
+
+    .eyebrow {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--ink);
+      margin-bottom: 18px;
+    }
+
+    h2 {
+      font-family: 'DM Serif Display', serif;
+      font-weight: 400;
+      font-size: clamp(40px, 5vw, 68px);
+      line-height: 1.05;
+      letter-spacing: -0.015em;
+      color: var(--ink);
+      margin-bottom: 24px;
+    }
+    h2 em { font-style: italic; }
+
+    .section-intro {
+      font-size: 18px;
+      line-height: 1.7;
+      color: var(--ink);
+      max-width: 600px;
+      font-weight: 300;
+    }
+
+    /* ─── ABOUT KENZIE ─── */
+    .about {
+      background: var(--cream-dk);
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 96px;
+      align-items: center;
+    }
+
+    .about-photo {
+      aspect-ratio: 4 / 5;
+      background:
+        linear-gradient(170deg, rgba(229,191,168,0.20), rgba(42,40,38,0.06)),
+        var(--cream);
+      position: relative;
+    }
+    /* PHOTO SLOT — Kenzie at work or in studio:
+       background: url('assets/kenzie-at-work.jpg') center/cover no-repeat; */
+    .about-photo::after {
+      content: 'photo: Kenzie at work';
+      position: absolute;
+      bottom: 24px;
+      left: 24px;
+      font-size: 12px;
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    .about-body p {
+      font-size: 18px;
+      line-height: 1.8;
+      color: var(--ink);
+      margin-bottom: 22px;
+      font-weight: 300;
+    }
+
+    .about-body p strong {
+      font-weight: 500;
+      color: var(--ink);
+    }
+
+    .about-meta {
+      margin-top: 40px;
+      padding-top: 32px;
+      border-top: 1px solid rgba(42, 40, 38, 0.15);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+
+    .meta-item h5 {
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+    .meta-item p {
+      font-family: 'DM Serif Display', serif;
+      font-size: 22px;
+      font-weight: 400;
+      color: var(--ink);
+      margin: 0;
+    }
+
+    /* ─── SERVICES ─── */
+    .services {
+      background: var(--cream);
+    }
+
+    .services-header {
+      max-width: 720px;
+      margin: 0 auto 80px;
+      text-align: center;
+    }
+
+    .services-header .star path { fill: var(--peach-dk); }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 48px 64px;
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+
+    .service {
+      padding-top: 28px;
+      border-top: 1px solid var(--ink);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 16px;
+      align-items: start;
+    }
+
+    .service-name {
+      font-family: 'DM Serif Display', serif;
+      font-size: 26px;
+      font-weight: 400;
+      color: var(--ink);
+      letter-spacing: -0.005em;
+      margin-bottom: 6px;
+    }
+
+    .service-desc {
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--muted);
+      max-width: 440px;
+      font-weight: 300;
+    }
+
+    .service-meta {
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .service-price {
+      font-family: 'DM Serif Display', serif;
+      font-size: 26px;
+      color: var(--ink);
+      display: block;
+    }
+
+    .service-duration {
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    .services-cta {
+      text-align: center;
+      margin-top: 80px;
+    }
+
+    .services-note {
+      font-size: 14px;
+      color: var(--muted);
+      max-width: 520px;
+      margin: 24px auto 0;
+      line-height: 1.6;
+      font-style: italic;
+    }
+
+    /* ─── PROCESS ─── */
+    .process {
+      background: var(--ink);
+      color: var(--cream);
+      padding: 130px 72px;
+    }
+
+    .process-header { max-width: 760px; margin: 0 auto 80px; text-align: center; }
+    .process-header .eyebrow { color: var(--peach); }
+    .process-header h2 { color: var(--cream); }
+    .process-header p { color: var(--cream-dk); }
+    .process-header .star path { fill: var(--peach); }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .step {
+      padding-top: 24px;
+      border-top: 1px solid rgba(250, 247, 242, 0.25);
+    }
+
+    .step-num {
+      font-family: 'DM Serif Display', serif;
+      font-style: italic;
+      font-size: 38px;
+      color: var(--peach);
+      margin-bottom: 16px;
+      line-height: 1;
+    }
+
+    .step h4 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 22px;
+      font-weight: 400;
+      color: var(--cream);
+      margin-bottom: 10px;
+    }
+
+    .step p {
+      font-size: 14px;
+      color: var(--cream-dk);
+      line-height: 1.65;
+      font-weight: 300;
+    }
+
+    /* ─── STUDIO ─── */
+    .studio {
+      background: var(--peach);
+      color: var(--ink);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .studio-text h2 { font-size: clamp(36px, 4vw, 52px); }
+    .studio-text p {
+      font-size: 18px;
+      line-height: 1.7;
+      margin-bottom: 28px;
+      font-weight: 300;
+    }
+    .studio-text .btn-link { border-color: var(--ink); }
+
+    .studio-photo {
+      aspect-ratio: 5 / 4;
+      background:
+        linear-gradient(140deg, rgba(42,40,38,0.10), rgba(250,247,242,0.30)),
+        var(--cream);
+      position: relative;
+    }
+    /* PHOTO SLOT — interior of Velvet Rose Beauty Collective:
+       background: url('assets/velvet-rose-interior.jpg') center/cover no-repeat; */
+    .studio-photo::after {
+      content: 'photo: Velvet Rose interior';
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      font-size: 12px;
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    /* ─── CTA BAND ─── */
+    .cta-band {
+      background: var(--cream);
+      text-align: center;
+      padding: 130px 72px;
+      border-top: 1px solid rgba(42, 40, 38, 0.1);
+    }
+    .cta-band h2 { margin-bottom: 32px; }
+    .cta-band .star path { fill: var(--peach-dk); }
+    .cta-band p {
+      font-size: 18px;
+      max-width: 580px;
+      margin: 0 auto 44px;
+      line-height: 1.6;
+      color: var(--ink);
+      font-weight: 300;
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--ink);
+      color: var(--cream-dk);
+      padding: 80px 72px 40px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 64px;
+      max-width: 1180px;
+      margin: 0 auto 60px;
+    }
+
+    .footer-brand {
+      font-family: 'DM Serif Display', serif;
+      font-size: 32px;
+      font-weight: 400;
+      color: var(--cream);
+      margin-bottom: 16px;
+      letter-spacing: -0.01em;
+    }
+
+    .footer-brand .star path { fill: var(--peach); }
+
+    .footer-tagline {
+      font-size: 14px;
+      color: var(--muted);
+      max-width: 360px;
+      line-height: 1.7;
+      font-weight: 300;
+    }
+
+    .footer-col h5 {
+      font-size: 11px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--peach);
+      margin-bottom: 18px;
+      font-weight: 500;
+    }
+
+    .footer-col p, .footer-col a {
+      display: block;
+      font-size: 14px;
+      color: var(--cream-dk);
+      line-height: 1.8;
+      font-weight: 300;
+    }
+    .footer-col a:hover { color: var(--peach); }
+
+    .footer-bottom {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding-top: 30px;
+      border-top: 1px solid rgba(250, 247, 242, 0.1);
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+    }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 900px) {
+      nav { padding: 16px 24px; }
+      .nav-link { display: none; }
+      .nav-right { gap: 16px; }
+
+      .hero { grid-template-columns: 1fr; }
+      .hero-text { padding: 56px 28px; order: 2; }
+      .hero-text::before { left: 28px; top: 80px; }
+      .hero-eyebrow { padding-top: 18px; margin-bottom: 40px; }
+      .hero-image { min-height: 380px; order: 1; }
+
+      section { padding: 80px 28px; }
+      .intro-strip { padding: 56px 28px; }
+      .process { padding: 80px 28px; }
+      .cta-band { padding: 80px 28px; }
+
+      .about, .studio { grid-template-columns: 1fr; gap: 48px; }
+      .services-grid { grid-template-columns: 1fr; gap: 36px; }
+      .process-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+
+      .footer-grid { grid-template-columns: 1fr; gap: 36px; }
+      .footer-bottom { flex-direction: column; gap: 8px; }
+    }
+    @media (max-width: 540px) {
+      .process-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- reusable sparkle SVG: Kenzie's brand element -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="sparkle" viewBox="0 0 24 24">
+        <path d="M12 0 L13.6 10.4 L24 12 L13.6 13.6 L12 24 L10.4 13.6 L0 12 L10.4 10.4 Z"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <nav>
+    <a href="#" class="nav-logo">Kenzie Brows</a>
+    <div class="nav-right">
+      <a href="#about" class="nav-link">About</a>
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#process" class="nav-link">Process</a>
+      <a href="https://kenziebrowsslc.as.me/schedule/56d9ecb3/" target="_blank" rel="noopener" class="nav-book">Book</a>
+    </div>
+  </nav>
+
+  <!-- ─── HERO ─── -->
+  <header class="hero">
+    <div class="hero-text">
+      <div class="hero-eyebrow">Salt Lake City &middot; Permanent Makeup &amp; Esthetics</div>
+      <img src="assets/kenzie-brows-logo.png" alt="Kenzie Brows" class="hero-logo">
+      <p class="hero-tagline">Brows, lashes, and lips that<br>still look like <em>you</em>.</p>
+      <p class="hero-sub">Permanent makeup, lash enhancements, and brow shaping &mdash; tailored to your face, never templated. New-client consultations are always complimentary.</p>
+      <div class="hero-cta-row">
+        <a href="https://kenziebrowsslc.as.me/schedule/56d9ecb3/" target="_blank" rel="noopener" class="btn-primary">Book an appointment</a>
+        <a href="#services" class="btn-link">View services</a>
+      </div>
+    </div>
+    <div class="hero-image" aria-label="Portrait of Kenzie"></div>
+  </header>
+
+  <!-- ─── INTRO STRIP ─── -->
+  <div class="intro-strip">
+    <svg class="star"><use href="#sparkle"/></svg>
+    <span>Soft. Considered. <em>Always yours.</em></span>
+    <svg class="star"><use href="#sparkle"/></svg>
+  </div>
+
+  <!-- ─── ABOUT ─── -->
+  <section id="about" class="about">
+    <div class="about-photo" aria-label="Kenzie at work"></div>
+    <div class="about-body">
+      <div class="eyebrow">Hi, I&rsquo;m Kenzie</div>
+      <h2>Permanent makeup is a<br>relationship, not a <em>transaction</em>.</h2>
+      <p>I&rsquo;ve spent years refining brows, lashes, and lips for clients across Salt Lake City &mdash; the kind of work where the goal isn&rsquo;t to be noticed. It&rsquo;s for you to wake up and feel like yourself.</p>
+      <p>Every appointment starts with a real conversation: face mapping, color matching, and time to talk through what you actually want. <strong>No pressure, no templates.</strong> Just thoughtful, low-maintenance beauty made for your face.</p>
+      <div class="about-meta">
+        <div class="meta-item">
+          <h5>Studio</h5>
+          <p>Velvet Rose Beauty</p>
+        </div>
+        <div class="meta-item">
+          <h5>Booking</h5>
+          <p>By appointment</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SERVICES ─── -->
+  <section id="services" class="services">
+    <div class="services-header">
+      <div class="eyebrow">
+        <svg class="star"><use href="#sparkle"/></svg>
+        Services &amp; Pricing
+        <svg class="star"><use href="#sparkle"/></svg>
+      </div>
+      <h2>What I do.</h2>
+    </div>
+
+    <div class="services-grid">
+
+      <div class="service">
+        <div>
+          <div class="service-name">Microblading</div>
+          <div class="service-desc">Hair-stroke brows tattooed with a precision blade. For fine, sparse, or over-tweezed brows.</div>
+        </div>
+        <div class="service-meta">
+          <span class="service-price">$400</span>
+          <div class="service-duration">3 hours</div>
+        </div>
+      </div>
+
+      <div class="service">
+        <div>
+          <div class="service-name">Microblading + Shading</div>
+          <div class="service-desc">Hair strokes layered with soft shading for a fuller, more defined finish.</div>
+        </div>
+        <div class="service-meta">
+          <span class="service-price">$450</span>
+          <div class="service-duration">3 hours</div>
+        </div>
+      </div>
+
+      <div class="service">
+        <div>
+          <div class="service-name">Powder Brow</div>
+          <div class="service-desc">A soft, makeup-look finish &mdash; perfect for clients who love a filled-in brow.</div>
+        </div>
+        <div class="service-meta">
+          <span class="service-price">$400</span>
+          <div class="service-duration">3 hours</div>
+        </div>
+      </div>
+
+      <div class="service">
+        <div>
+          <div class="service-name">Nano Brows</div>
+          <div class="service-desc">A newer, gentler hair-stroke technique using a single-needle machine. Suits most skin types.</div>
+        </div>
+        <div class="service-meta">
+          <span class="service-price">$250</span>
+          <div class="service-duration">3 hours</div>
+        </div>
+      </div>
+
+      <div class="service">
+        <div>
+          <div class="service-name">Lip Blush</div>
+          <div class="service-desc">A semi-permanent tattoo that enhances natural lip shape and color &mdash; soft, never lined.</div>
+        </div>
+        <div class="service-meta">
+          <span class="service-price">$250</span>
+          <div class="service-duration">3 hours</div>
+        </div>
+      </div>
+
+      <div class="service">
+        <div>
+          <div class="service-name">Lash Line Enhancement</div>
+          <div class="service-desc">A subtle tattoo placed where the lashes grow &mdash; not eyeliner. Defines and brightens.</div>
+        </div>
+        <div class="service-meta">
+          <span class="service-price">$250</span>
+          <div class="service-duration">3 hours</div>
+        </div>
+      </div>
+
+      <div class="service">
+        <div>
+          <div class="service-name">Brow Lamination</div>
+          <div class="service-desc">A chemical brow lift for fuller, fluffier brows. Includes shaping. Tinting available.</div>
+        </div>
+        <div class="service-meta">
+          <span class="service-price">from $80</span>
+          <div class="service-duration">60 min</div>
+        </div>
+      </div>
+
+      <div class="service">
+        <div>
+          <div class="service-name">Luxe Lami</div>
+          <div class="service-desc">Lamination, shaping, hydrojelly mask, scalp massage, under-eye hydration. The full ritual.</div>
+        </div>
+        <div class="service-meta">
+          <span class="service-price">from $110</span>
+          <div class="service-duration">90 min</div>
+        </div>
+      </div>
+
+      <div class="service">
+        <div>
+          <div class="service-name">Lash Lift</div>
+          <div class="service-desc">Lifted, fuller-looking lashes for 6&ndash;8 weeks &mdash; no extensions, no glue.</div>
+        </div>
+        <div class="service-meta">
+          <span class="service-price">from $80</span>
+          <div class="service-duration">60 min</div>
+        </div>
+      </div>
+
+      <div class="service">
+        <div>
+          <div class="service-name">Brow Shaping &amp; Tinting</div>
+          <div class="service-desc">Brows mapped to your face, waxed or tweezed, optionally tinted.</div>
+        </div>
+        <div class="service-meta">
+          <span class="service-price">from $30</span>
+          <div class="service-duration">30 min</div>
+        </div>
+      </div>
+
+      <div class="service">
+        <div>
+          <div class="service-name">Touch-Ups</div>
+          <div class="service-desc">6&ndash;12 week, 3&ndash;6 month, and yearly refreshes for existing PMU clients.</div>
+        </div>
+        <div class="service-meta">
+          <span class="service-price">from $75</span>
+          <div class="service-duration">2.5 hours</div>
+        </div>
+      </div>
+
+      <div class="service">
+        <div>
+          <div class="service-name">Consultation</div>
+          <div class="service-desc">A 15-minute chat to talk through your goals before booking PMU. Always free.</div>
+        </div>
+        <div class="service-meta">
+          <span class="service-price">Free</span>
+          <div class="service-duration">15 min</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="services-cta">
+      <a href="https://kenziebrowsslc.as.me/schedule/56d9ecb3/" target="_blank" rel="noopener" class="btn-primary">Reserve your appointment</a>
+      <p class="services-note">A consultation is required before booking microblading or shading if you have previous permanent makeup.</p>
+    </div>
+  </section>
+
+  <!-- ─── PROCESS ─── -->
+  <section id="process" class="process">
+    <div class="process-header">
+      <div class="eyebrow">
+        <svg class="star"><use href="#sparkle"/></svg>
+        What to expect
+        <svg class="star"><use href="#sparkle"/></svg>
+      </div>
+      <h2>A calm, considered<br><em>experience</em>.</h2>
+    </div>
+
+    <div class="process-grid">
+      <div class="step">
+        <div class="step-num">i.</div>
+        <h4>Consultation</h4>
+        <p>We&rsquo;ll talk through your goals, your skin, and what&rsquo;s realistic for your face. No deposits required.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">ii.</div>
+        <h4>Mapping &amp; design</h4>
+        <p>Brows or lips are drawn on first &mdash; we don&rsquo;t start until you love what you see in the mirror.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">iii.</div>
+        <h4>The session</h4>
+        <p>Roughly three hours, with breaks. Numbing throughout. Most clients describe it as relaxing.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">iv.</div>
+        <h4>Healing &amp; touch-up</h4>
+        <p>Color settles over 4&ndash;6 weeks. A touch-up perfects shape and saturation.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── STUDIO ─── -->
+  <section class="studio">
+    <div class="studio-text">
+      <div class="eyebrow">The Studio</div>
+      <h2>Find me at <em>Velvet Rose Beauty Collective</em>.</h2>
+      <p>I work out of Velvet Rose &mdash; a small, hand-picked beauty collective in Salt Lake City I founded for artists who care about their craft.</p>
+      <a href="https://velvetroseslc.com/" target="_blank" rel="noopener" class="btn-link">Visit Velvet Rose &rarr;</a>
+    </div>
+    <div class="studio-photo" aria-label="Velvet Rose Beauty Collective interior"></div>
+  </section>
+
+  <!-- ─── CTA BAND ─── -->
+  <section class="cta-band">
+    <div class="eyebrow">
+      <svg class="star"><use href="#sparkle"/></svg>
+      Ready to book
+      <svg class="star"><use href="#sparkle"/></svg>
+    </div>
+    <h2>Let&rsquo;s make your<br><em>brows</em> feel like home.</h2>
+    <p>Booking is open online through Acuity. New clients welcome.</p>
+    <a href="https://kenziebrowsslc.as.me/schedule/56d9ecb3/" target="_blank" rel="noopener" class="btn-primary">Book with Kenzie</a>
+  </section>
+
+  <!-- ─── FOOTER ─── -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          Kenzie Brows
+          <svg class="star" style="width:20px; height:20px; margin-left:8px"><use href="#sparkle"/></svg>
+        </div>
+        <p class="footer-tagline">Permanent makeup &amp; esthetics by Kenzie. By appointment at Velvet Rose Beauty Collective in Salt Lake City, Utah.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Visit</h5>
+        <p>Velvet Rose Beauty</p>
+        <p>Salt Lake City, UT</p>
+      </div>
+      <div class="footer-col">
+        <h5>Connect</h5>
+        <a href="https://kenziebrowsslc.as.me/schedule/56d9ecb3/" target="_blank" rel="noopener">Book online</a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
+        <a href="mailto:hello@kenziebrows.com">Email</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; Kenzie Brows</span>
+      <span>Site by Omnia Marketing</span>
+    </div>
+  </footer>
+
+</body>
+</html>
