@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>B0ld Beauty by Tay Chanel | Lashes, Brows & Waxing in Lawrenceville, GA</title>
+  <meta name="description" content="A vibrant beauty suite in Lawrenceville, GA. Lash extensions, brow lamination, Brazilian waxing, facials, and dermaplaning by Tay Chanel. Book online.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --fuchsia:        #E91E63;
+      --fuchsia-deep:   #B01450;
+      --fuchsia-soft:   #FCE4EE;
+      --fuchsia-mist:   #FFF5F9;
+      --ink:            #1A1A1A;
+      --ink-mid:        #4A4A4A;
+      --ink-light:      #888888;
+      --paper:          #FFFFFF;
+      --line:           #EAEAEA;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      font-size: 16px;
+      line-height: 1.65;
+      font-weight: 400;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    /* ─── NAV ─── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 48px;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav-logo {
+      font-family: 'Fraunces', serif;
+      font-weight: 600;
+      font-size: 22px;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+    }
+    .nav-logo .accent { color: var(--fuchsia); }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 36px;
+    }
+    .nav-links a {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--ink-mid);
+      letter-spacing: 0.02em;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--fuchsia); }
+    .nav-cta {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 10px 22px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      transition: background 0.2s;
+    }
+    .nav-cta:hover { background: var(--fuchsia); color: var(--paper) !important; }
+    .nav-toggle { display: none; }
+
+    /* ─── HERO ─── */
+    .hero {
+      padding: 160px 48px 100px;
+      background: linear-gradient(180deg, var(--fuchsia-mist) 0%, var(--paper) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.15fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--fuchsia);
+      margin-bottom: 28px;
+    }
+    .hero-eyebrow::before {
+      content: "";
+      width: 24px;
+      height: 1px;
+      background: var(--fuchsia);
+    }
+    .hero h1 {
+      font-family: 'Fraunces', serif;
+      font-weight: 500;
+      font-size: clamp(48px, 6vw, 88px);
+      line-height: 1.02;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      margin-bottom: 28px;
+    }
+    .hero h1 em {
+      font-style: italic;
+      font-weight: 400;
+      color: var(--fuchsia);
+    }
+    .hero p {
+      font-size: 18px;
+      line-height: 1.7;
+      color: var(--ink-mid);
+      max-width: 520px;
+      margin-bottom: 40px;
+    }
+    .hero-ctas {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 32px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      border: 1px solid transparent;
+    }
+    .btn-primary {
+      background: var(--fuchsia);
+      color: var(--paper);
+    }
+    .btn-primary:hover { background: var(--fuchsia-deep); }
+    .btn-secondary {
+      background: transparent;
+      color: var(--ink);
+      border: 1px solid var(--ink);
+    }
+    .btn-secondary:hover { background: var(--ink); color: var(--paper); }
+
+    .hero-visual {
+      position: relative;
+      aspect-ratio: 4 / 5;
+      background: var(--fuchsia);
+      overflow: hidden;
+    }
+    .hero-visual::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 30% 20%, rgba(255, 200, 220, 0.5), transparent 50%),
+        radial-gradient(circle at 70% 80%, rgba(176, 20, 80, 0.6), transparent 60%);
+    }
+    .hero-visual-label {
+      position: absolute;
+      bottom: 24px;
+      left: 24px;
+      right: 24px;
+      color: var(--paper);
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 18px;
+      letter-spacing: 0.01em;
+      line-height: 1.4;
+    }
+    .hero-visual-label .small {
+      display: block;
+      font-family: 'Inter', sans-serif;
+      font-style: normal;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      opacity: 0.7;
+      margin-bottom: 8px;
+    }
+
+    .hero-stats {
+      max-width: 1200px;
+      margin: 80px auto 0;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .stat {
+      padding: 28px 32px;
+      border-right: 1px solid var(--line);
+    }
+    .stat:last-child { border-right: none; }
+    .stat-num {
+      font-family: 'Fraunces', serif;
+      font-weight: 500;
+      font-size: 36px;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .stat-num .star { color: var(--fuchsia); }
+    .stat-label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+    }
+
+    /* ─── SECTION COMMON ─── */
+    section { padding: 120px 48px; }
+    .section-inner { max-width: 1200px; margin: 0 auto; }
+    .section-head {
+      max-width: 720px;
+      margin: 0 auto 72px;
+      text-align: center;
+    }
+    .section-head .eyebrow {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--fuchsia);
+      margin-bottom: 18px;
+    }
+    .section-head h2 {
+      font-family: 'Fraunces', serif;
+      font-weight: 500;
+      font-size: clamp(36px, 4vw, 56px);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      margin-bottom: 20px;
+    }
+    .section-head h2 em {
+      font-style: italic;
+      color: var(--fuchsia);
+      font-weight: 400;
+    }
+    .section-head p {
+      font-size: 17px;
+      color: var(--ink-mid);
+      line-height: 1.7;
+    }
+
+    /* ─── SERVICES ─── */
+    .services { background: var(--paper); }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      border: 1px solid var(--line);
+    }
+    .service-card {
+      padding: 44px 36px;
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      transition: background 0.25s;
+      position: relative;
+    }
+    .service-card:hover { background: var(--fuchsia-mist); }
+    .service-card:nth-child(3n) { border-right: none; }
+    .service-card:nth-last-child(-n+3) { border-bottom: none; }
+    .service-num {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 14px;
+      color: var(--fuchsia);
+      margin-bottom: 24px;
+    }
+    .service-card h3 {
+      font-family: 'Fraunces', serif;
+      font-weight: 500;
+      font-size: 26px;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+      margin-bottom: 14px;
+      line-height: 1.2;
+    }
+    .service-card p {
+      font-size: 14.5px;
+      line-height: 1.7;
+      color: var(--ink-mid);
+      margin-bottom: 24px;
+    }
+    .service-card .price {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+    }
+    .service-card .price strong {
+      color: var(--ink);
+      font-weight: 600;
+    }
+    .services-cta {
+      text-align: center;
+      margin-top: 56px;
+    }
+
+    /* ─── ABOUT ─── */
+    .about {
+      background: var(--fuchsia-mist);
+      overflow: hidden;
+    }
+    .about-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .about-visual {
+      aspect-ratio: 4 / 5;
+      background: var(--fuchsia);
+      position: relative;
+      overflow: hidden;
+    }
+    .about-visual::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 60% 30%, rgba(255, 220, 235, 0.6), transparent 55%),
+        radial-gradient(circle at 20% 90%, rgba(140, 10, 60, 0.5), transparent 60%);
+    }
+    .about-visual-tag {
+      position: absolute;
+      top: 24px;
+      left: 24px;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--paper);
+      opacity: 0.85;
+    }
+    .about-visual-tag::before {
+      content: "";
+      display: inline-block;
+      width: 20px;
+      height: 1px;
+      background: var(--paper);
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+    .about-visual-name {
+      position: absolute;
+      bottom: 32px;
+      left: 32px;
+      right: 32px;
+      color: var(--paper);
+    }
+    .about-visual-name .signature {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 42px;
+      letter-spacing: -0.01em;
+      line-height: 1;
+    }
+    .about-visual-name .role {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-top: 8px;
+      opacity: 0.8;
+    }
+
+    .about-copy .eyebrow {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--fuchsia);
+      margin-bottom: 20px;
+    }
+    .about-copy h2 {
+      font-family: 'Fraunces', serif;
+      font-weight: 500;
+      font-size: clamp(36px, 4vw, 52px);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      margin-bottom: 28px;
+    }
+    .about-copy h2 em {
+      font-style: italic;
+      color: var(--fuchsia);
+      font-weight: 400;
+    }
+    .about-copy p {
+      font-size: 17px;
+      line-height: 1.75;
+      color: var(--ink-mid);
+      margin-bottom: 20px;
+    }
+    .about-copy p:last-of-type { margin-bottom: 36px; }
+
+    /* ─── PROOF ─── */
+    .proof { background: var(--paper); padding: 100px 48px; }
+    .proof-inner {
+      max-width: 980px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 64px 48px;
+      border: 1px solid var(--line);
+      background: var(--paper);
+    }
+    .proof-rating {
+      font-family: 'Fraunces', serif;
+      font-weight: 500;
+      font-size: 64px;
+      line-height: 1;
+      color: var(--ink);
+      letter-spacing: -0.02em;
+    }
+    .proof-stars {
+      color: var(--fuchsia);
+      font-size: 22px;
+      letter-spacing: 0.2em;
+      margin: 16px 0 12px;
+    }
+    .proof-label {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+      margin-bottom: 28px;
+    }
+    .proof-quote {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 1.5;
+      color: var(--ink);
+      max-width: 720px;
+      margin: 0 auto 24px;
+    }
+    .proof-attr {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+    }
+    .proof-link {
+      display: inline-block;
+      margin-top: 36px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--fuchsia);
+      border-bottom: 1px solid var(--fuchsia);
+      padding-bottom: 2px;
+    }
+
+    /* ─── VISIT / BOOK ─── */
+    .visit {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 120px 48px;
+    }
+    .visit-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .visit h2 {
+      font-family: 'Fraunces', serif;
+      font-weight: 500;
+      font-size: clamp(40px, 5vw, 64px);
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      margin-bottom: 28px;
+    }
+    .visit h2 em {
+      font-style: italic;
+      color: var(--fuchsia);
+      font-weight: 400;
+    }
+    .visit .eyebrow {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--fuchsia);
+      margin-bottom: 20px;
+    }
+    .visit p {
+      font-size: 17px;
+      line-height: 1.75;
+      color: rgba(255, 255, 255, 0.75);
+      margin-bottom: 28px;
+      max-width: 480px;
+    }
+    .visit .btn-primary { background: var(--fuchsia); }
+    .visit .btn-primary:hover { background: var(--paper); color: var(--ink); }
+
+    .visit-info {
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      padding: 40px;
+    }
+    .info-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 18px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      gap: 24px;
+    }
+    .info-row:last-child { border-bottom: none; }
+    .info-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.5);
+      flex-shrink: 0;
+    }
+    .info-value {
+      font-size: 14px;
+      color: var(--paper);
+      text-align: right;
+      line-height: 1.5;
+    }
+    .info-value strong { font-weight: 600; }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--paper);
+      padding: 60px 48px 40px;
+      border-top: 1px solid var(--line);
+    }
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+    .footer-brand {
+      font-family: 'Fraunces', serif;
+      font-weight: 600;
+      font-size: 20px;
+      color: var(--ink);
+    }
+    .footer-brand .accent { color: var(--fuchsia); }
+    .footer-meta {
+      font-size: 13px;
+      color: var(--ink-light);
+    }
+    .footer-meta a { color: var(--ink-mid); }
+    .footer-meta a:hover { color: var(--fuchsia); }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 960px) {
+      nav { padding: 16px 24px; }
+      .nav-links { display: none; }
+      .hero { padding: 130px 24px 80px; }
+      .hero-inner { grid-template-columns: 1fr; gap: 48px; }
+      .hero-visual { max-width: 480px; margin: 0 auto; }
+      .hero-stats { grid-template-columns: repeat(2, 1fr); margin-top: 56px; }
+      .stat { border-bottom: 1px solid var(--line); }
+      .stat:nth-child(2) { border-right: none; }
+      .stat:nth-last-child(-n+2) { border-bottom: none; }
+      section { padding: 80px 24px; }
+      .section-head { margin-bottom: 48px; }
+      .services-grid { grid-template-columns: 1fr; }
+      .service-card { border-right: none; }
+      .service-card:nth-child(3n) { border-right: none; }
+      .service-card:not(:last-child) { border-bottom: 1px solid var(--line); }
+      .service-card:nth-last-child(-n+3) { border-bottom: 1px solid var(--line); }
+      .service-card:last-child { border-bottom: none; }
+      .about-grid, .visit-grid { grid-template-columns: 1fr; gap: 48px; }
+      .about-visual { max-width: 440px; margin: 0 auto; }
+      .proof-inner { padding: 48px 24px; }
+      .proof-rating { font-size: 52px; }
+      .proof-quote { font-size: 20px; }
+      .visit { padding: 80px 24px; }
+      .visit-info { padding: 28px; }
+      footer { padding: 40px 24px 32px; }
+      .footer-inner { flex-direction: column; text-align: center; }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 { font-size: 44px; }
+      .hero-ctas { flex-direction: column; align-items: stretch; }
+      .btn { justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-logo">B<span class="accent">0</span>ld Beauty</a>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#visit">Visit</a>
+    </div>
+    <a href="https://taylorbrightwell.glossgenius.com" class="nav-cta">Book</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-eyebrow">Lawrenceville, GA</div>
+        <h1>Bold beauty,<br>done <em>boldly.</em></h1>
+        <p>A vibrant beauty suite for the woman who shows up for herself. Lashes, brows, waxing, and skin — handled in a fuchsia-pink studio designed to feel like yours.</p>
+        <div class="hero-ctas">
+          <a href="https://taylorbrightwell.glossgenius.com" class="btn btn-primary">Book Your Visit</a>
+          <a href="#services" class="btn btn-secondary">See Services</a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="hero-visual-label">
+          <span class="small">The Suite</span>
+          Fuchsia walls, fresh lashes, freshly-waxed everything.
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-num">5.0<span class="star">★</span></div>
+        <div class="stat-label">Google Rating</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">6+</div>
+        <div class="stat-label">Signature Services</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">1:1</div>
+        <div class="stat-label">Private Suite</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">7 Days</div>
+        <div class="stat-label">Online Booking</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="services">
+    <div class="section-inner">
+      <div class="section-head">
+        <div class="eyebrow">The Menu</div>
+        <h2>Everything you came <em>for.</em></h2>
+        <p>Specialized in the services that matter most — and refined to feel less like an appointment, more like an experience.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-num">01</div>
+          <h3>Lash Extensions</h3>
+          <p>Classic, hybrid, and volume sets tailored to your eye shape. Mapped, lightweight, and built to last between fills.</p>
+          <div class="price"><strong>Full Sets</strong> &nbsp;&middot;&nbsp; From $145</div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-num">02</div>
+          <h3>Lash Fills</h3>
+          <p>Two and three-week refills to keep the look you walked out with. Booked in advance to stay on your rotation.</p>
+          <div class="price"><strong>Refills</strong> &nbsp;&middot;&nbsp; From $65</div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-num">03</div>
+          <h3>Brow Lamination</h3>
+          <p>Fluffy, fuller, fixed-in-place brows for six to eight weeks. Shaped, tinted, and finished to frame your face.</p>
+          <div class="price"><strong>Lamination + Tint</strong> &nbsp;&middot;&nbsp; From $90</div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-num">04</div>
+          <h3>Brazilian Waxing</h3>
+          <p>Fast, clean, and judgment-free. Hard wax, premium prep, and a technique that keeps you coming back.</p>
+          <div class="price"><strong>Brazilian</strong> &nbsp;&middot;&nbsp; From $65</div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-num">05</div>
+          <h3>Custom Facials</h3>
+          <p>Skin-first facials built to your concerns — hydration, glow, breakouts, or maintenance. No one-size-fits-all menu.</p>
+          <div class="price"><strong>Signature Facial</strong> &nbsp;&middot;&nbsp; From $95</div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-num">06</div>
+          <h3>Dermaplaning</h3>
+          <p>A smooth, peach-fuzz-free reset that primes your skin for makeup, glow, and every facial that follows.</p>
+          <div class="price"><strong>Dermaplaning</strong> &nbsp;&middot;&nbsp; From $75</div>
+        </div>
+      </div>
+
+      <div class="services-cta">
+        <a href="https://taylorbrightwell.glossgenius.com" class="btn btn-primary">View Full Menu &amp; Book</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <div class="about-grid">
+      <div class="about-visual" aria-hidden="true">
+        <div class="about-visual-tag">Meet Your Artist</div>
+        <div class="about-visual-name">
+          <div class="signature">Tay Chanel</div>
+          <div class="role">Founder &amp; Lead Esthetician</div>
+        </div>
+      </div>
+
+      <div class="about-copy">
+        <div class="eyebrow">The Story</div>
+        <h2>Beauty with <em>backbone.</em></h2>
+        <p>B0ld Beauty started with a simple idea: a place in Lawrenceville where women could come exactly as they are and leave feeling exactly as they want to. A fuchsia suite, no waiting room small talk, no rushed appointments — just one client at a time, treated like the only client of the day.</p>
+        <p>Every service is mine from start to finish. Brows, lashes, wax, skin — all under one roof, all built around the kind of details that don't get rushed and don't get skipped. You're not booking a service. You're booking time that's all yours.</p>
+        <a href="https://taylorbrightwell.glossgenius.com" class="btn btn-primary">Book With Tay</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROOF -->
+  <section class="proof">
+    <div class="proof-inner">
+      <div class="proof-rating">5.0</div>
+      <div class="proof-stars">★ ★ ★ ★ ★</div>
+      <div class="proof-label">Rated on Google</div>
+      <div class="proof-quote">"The kind of beauty appointment you actually look forward to. Detail, vibe, and the work itself — all on point."</div>
+      <div class="proof-attr">— Client Review</div>
+      <a href="https://www.google.com/search?q=B0ld+Beauty+by+Tay+Chanel+Lawrenceville" class="proof-link" target="_blank" rel="noopener">Read All Reviews on Google →</a>
+    </div>
+  </section>
+
+  <!-- VISIT -->
+  <section id="visit" class="visit">
+    <div class="visit-grid">
+      <div>
+        <div class="eyebrow">Plan Your Visit</div>
+        <h2>Come see the <em>suite.</em></h2>
+        <p>Private studio in Lawrenceville, GA. Booking opens online 24/7 — secure your slot, get a confirmation, and arrive ready to be taken care of.</p>
+        <a href="https://taylorbrightwell.glossgenius.com" class="btn btn-primary">Book Online</a>
+      </div>
+
+      <div class="visit-info">
+        <div class="info-row">
+          <div class="info-label">Location</div>
+          <div class="info-value"><strong>Lawrenceville, GA</strong><br>Address shared on booking</div>
+        </div>
+        <div class="info-row">
+          <div class="info-label">Booking</div>
+          <div class="info-value">Online, 24/7</div>
+        </div>
+        <div class="info-row">
+          <div class="info-label">By</div>
+          <div class="info-value">Tay Chanel</div>
+        </div>
+        <div class="info-row">
+          <div class="info-label">Follow</div>
+          <div class="info-value">@b0ldbeautybytaychanel</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">B<span class="accent">0</span>ld Beauty by Tay Chanel</div>
+      <div class="footer-meta">© 2026 &nbsp;&middot;&nbsp; Lawrenceville, GA &nbsp;&middot;&nbsp; <a href="https://taylorbrightwell.glossgenius.com">Book online</a></div>
+    </div>
+  </footer>
+
+</body>
+</html>
