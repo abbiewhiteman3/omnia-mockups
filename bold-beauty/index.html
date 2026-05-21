@@ -8,32 +8,31 @@
   <meta name="description" content="A bold beauty suite in Lawrenceville, GA. Lash extensions, brow lamination, Brazilian waxing, custom facials, and dermaplaning by Tay Chanel. Book online.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&family=Pinyon+Script&display=swap" rel="stylesheet">
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --pink:      #D76BBB;
-      --pink-dk:   #A8438D;
-      --pink-tt:   #F2D7E9;
-      --yellow:    #F4F33D;
-      --yellow-dk: #C6C520;
-      --yellow-tt: #FBFABB;
-      --ink:       #181818;
-      --ink-soft:  #5E5E5E;
-      --cream:     #FFFBF0;
-      --paper:     #FFFFFF;
+      --pink:       #EC2986;
+      --pink-dk:    #C01E6E;
+      --pink-soft:  #FFE0EE;
+      --pink-mist:  #FFF1F7;
+      --cream:      #FFF8F0;
+      --ink:        #0F0F0F;
+      --ink-soft:   #5E5E5E;
+      --gold:       #D4AF37;
+      --paper:      #FFFFFF;
     }
 
     html { scroll-behavior: smooth; }
 
     body {
-      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      font-family: 'Inter', system-ui, sans-serif;
       background: var(--cream);
       color: var(--ink);
       font-size: 17px;
-      line-height: 1.55;
+      line-height: 1.6;
       font-weight: 400;
       -webkit-font-smoothing: antialiased;
       overflow-x: hidden;
@@ -41,22 +40,23 @@
 
     a { color: inherit; text-decoration: none; }
 
-    .display { font-family: 'Caprasimo', Georgia, serif; font-weight: 400; }
+    .serif { font-family: 'DM Serif Display', serif; font-weight: 400; }
+    .script { font-family: 'Pinyon Script', cursive; font-weight: 400; }
 
-    /* The B0ld wordmark — the zero is the brand signature */
+    /* B0ld wordmark - serif with rotated pink 0 */
     .wm {
-      font-family: 'Caprasimo', Georgia, serif;
+      font-family: 'DM Serif Display', serif;
       font-weight: 400;
       letter-spacing: -0.01em;
     }
     .wm .zero {
       display: inline-block;
       color: var(--pink);
+      font-style: italic;
       transform: rotate(-6deg);
-      vertical-align: -0.04em;
     }
 
-    /* ─── FLOATING BOOK BUTTON (replaces traditional nav) ─── */
+    /* ─── FLOATING BOOK PILL ─── */
     .float-book {
       position: fixed;
       bottom: 28px;
@@ -65,61 +65,69 @@
       background: var(--ink);
       color: var(--cream);
       border-radius: 999px;
-      padding: 18px 32px;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 14px;
-      font-weight: 700;
-      letter-spacing: 0.04em;
+      padding: 17px 30px;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
       display: inline-flex;
       align-items: center;
       gap: 12px;
-      box-shadow: 0 6px 24px rgba(0,0,0,0.18);
+      box-shadow: 0 8px 28px rgba(236, 41, 134, 0.35);
       transition: transform 0.18s ease, background 0.18s ease;
     }
     .float-book:hover { transform: translateY(-3px); background: var(--pink); }
-    .float-book .dot {
-      display: inline-block;
-      width: 8px; height: 8px;
-      background: var(--yellow);
-      border-radius: 50%;
+    .float-book .heart {
+      color: var(--pink);
+      font-size: 14px;
       animation: pulse 1.8s infinite;
+      display: inline-block;
     }
+    .float-book:hover .heart { color: var(--cream); }
     @keyframes pulse {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.5; transform: scale(1.25); }
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
     }
 
-    /* ─── TINY HEADER (just brand + IG, no real nav) ─── */
+    /* ─── TINY HEADER ─── */
     .top {
-      padding: 24px 32px;
+      padding: 22px 32px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       font-size: 13px;
+      background: var(--cream);
+      position: relative;
+      z-index: 5;
     }
     .top-brand {
-      font-family: 'Caprasimo', serif;
-      font-size: 22px;
+      font-family: 'DM Serif Display', serif;
+      font-size: 24px;
       letter-spacing: -0.01em;
     }
     .top-brand .zero {
       color: var(--pink);
       display: inline-block;
       transform: rotate(-6deg);
+      font-style: italic;
     }
     .top-meta {
       display: flex;
-      gap: 24px;
+      gap: 22px;
       font-weight: 500;
       color: var(--ink-soft);
+      align-items: center;
     }
     .top-meta a:hover { color: var(--pink); }
+    .top-meta .heart { color: var(--pink); font-size: 14px; }
 
-    /* ─── HERO — single-column, layered, poster-like ─── */
+    /* ─── HERO ─── */
     .hero {
+      background: var(--pink);
+      color: var(--cream);
+      padding: 64px 32px 120px;
       position: relative;
-      padding: 48px 32px 80px;
       overflow: hidden;
     }
     .hero-inner {
@@ -128,181 +136,216 @@
       position: relative;
     }
 
-    /* Big yellow blob behind the headline */
-    .blob {
+    /* Decorative cream blob */
+    .hero-blob {
       position: absolute;
-      top: -40px;
-      left: -80px;
-      width: 540px;
-      height: 540px;
-      background: var(--yellow);
+      bottom: -160px;
+      right: -100px;
+      width: 480px;
+      height: 480px;
+      background: var(--cream);
       border-radius: 50%;
+      opacity: 0.12;
       z-index: 0;
-      filter: blur(0.5px);
     }
-    .blob-2 {
+    .hero-mark {
       position: absolute;
-      top: 200px;
-      right: -120px;
-      width: 320px;
-      height: 320px;
-      background: var(--pink);
-      border-radius: 50%;
-      z-index: 0;
+      top: -20px;
+      right: 6%;
+      font-family: 'Pinyon Script', cursive;
+      font-size: 110px;
+      line-height: 1;
+      color: var(--cream);
+      opacity: 0.18;
+      transform: rotate(-8deg);
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .hero-eyebrow {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--cream);
       opacity: 0.85;
-    }
-
-    .hero h1 {
-      position: relative;
-      z-index: 2;
-      font-family: 'Caprasimo', serif;
-      font-weight: 400;
-      font-size: clamp(80px, 16vw, 280px);
-      line-height: 0.85;
-      letter-spacing: -0.03em;
-      color: var(--ink);
       margin-bottom: 32px;
-    }
-    .hero h1 .zero {
-      color: var(--pink);
-      display: inline-block;
-      transform: rotate(-8deg) translateY(0.04em);
-    }
-
-    .hero-sub {
-      position: relative;
-      z-index: 2;
-      font-family: 'Caprasimo', serif;
-      font-weight: 400;
-      font-size: clamp(28px, 3.4vw, 52px);
-      line-height: 1.05;
-      letter-spacing: -0.01em;
-      color: var(--ink);
-      max-width: 14ch;
-      margin-bottom: 56px;
-    }
-    .hero-sub .accent {
-      background: var(--yellow);
-      padding: 2px 14px 8px;
-      display: inline-block;
-      transform: rotate(-1.5deg);
-      box-shadow: 4px 4px 0 var(--ink);
-    }
-
-    /* Sticker badges */
-    .sticker {
-      position: absolute;
       display: inline-flex;
       align-items: center;
-      justify-content: center;
-      text-align: center;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      line-height: 1.2;
-      z-index: 3;
-      box-shadow: 3px 3px 0 var(--ink);
-    }
-    .sticker-1 {
-      top: 80px;
-      right: 8%;
-      width: 130px;
-      height: 130px;
-      border-radius: 50%;
-      background: var(--ink);
-      color: var(--yellow);
-      transform: rotate(-12deg);
-      padding: 14px;
-    }
-    .sticker-2 {
-      top: 320px;
-      right: 18%;
-      background: var(--pink);
-      color: var(--ink);
-      padding: 10px 18px;
-      transform: rotate(6deg);
-      border: 2px solid var(--ink);
-    }
-
-    .hero-bottom {
+      gap: 12px;
       position: relative;
       z-index: 2;
-      max-width: 720px;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 18px;
-      line-height: 1.65;
-      color: var(--ink);
     }
-    .hero-bottom strong {
-      background: var(--pink);
-      padding: 0 6px;
+    .hero-eyebrow .heart { color: var(--cream); }
+
+    .hero-h1 {
+      position: relative;
+      z-index: 2;
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(72px, 13vw, 220px);
+      line-height: 0.95;
+      letter-spacing: -0.02em;
+      color: var(--cream);
+      margin-bottom: 24px;
+    }
+    .hero-h1 .zero {
       color: var(--ink);
-      font-weight: 600;
+      font-style: italic;
+      display: inline-block;
+      transform: rotate(-8deg);
+    }
+    .hero-h1 .script-word {
+      font-family: 'Pinyon Script', cursive;
+      font-size: 0.55em;
+      font-style: normal;
+      color: var(--cream);
+      display: inline-block;
+      margin: 0 0.1em 0 0;
+      transform: translateY(0.06em);
+      letter-spacing: 0;
     }
 
-    /* ─── SCROLLING TICKER (between sections) ─── */
+    .hero-tag {
+      position: relative;
+      z-index: 2;
+      font-family: 'DM Serif Display', serif;
+      font-style: italic;
+      font-size: clamp(22px, 2.6vw, 36px);
+      line-height: 1.3;
+      color: var(--cream);
+      max-width: 22ch;
+      margin-bottom: 48px;
+    }
+
+    .hero-body {
+      position: relative;
+      z-index: 2;
+      max-width: 580px;
+      font-size: 17px;
+      line-height: 1.7;
+      color: var(--cream);
+      opacity: 0.95;
+      margin-bottom: 44px;
+    }
+
+    .hero-actions {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .btn-cream {
+      background: var(--cream);
+      color: var(--ink);
+      padding: 18px 36px;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      transition: transform 0.18s, background 0.18s;
+    }
+    .btn-cream:hover { background: var(--ink); color: var(--cream); transform: translateY(-2px); }
+    .btn-ghost-light {
+      color: var(--cream);
+      padding: 18px 32px;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border-radius: 999px;
+      border: 1.5px solid rgba(255,248,240,0.5);
+      transition: all 0.18s;
+    }
+    .btn-ghost-light:hover { background: var(--cream); color: var(--ink); border-color: var(--cream); }
+
+    /* ─── HEART TICKER ─── */
     .ticker {
       background: var(--ink);
-      color: var(--yellow);
-      padding: 14px 0;
+      color: var(--cream);
+      padding: 16px 0;
       overflow: hidden;
-      border-top: 3px solid var(--ink);
-      border-bottom: 3px solid var(--ink);
+      border-top: 2px solid var(--pink);
+      border-bottom: 2px solid var(--pink);
     }
     .ticker-track {
       display: flex;
-      gap: 40px;
-      animation: scroll 30s linear infinite;
+      gap: 36px;
+      animation: scroll 32s linear infinite;
       white-space: nowrap;
-      font-family: 'Caprasimo', serif;
+      font-family: 'DM Serif Display', serif;
+      font-style: italic;
       font-size: 22px;
       letter-spacing: -0.01em;
     }
-    .ticker-track span { display: inline-flex; align-items: center; gap: 40px; }
+    .ticker-track span { display: inline-flex; align-items: center; gap: 36px; }
     .ticker-track span::after {
-      content: "✺";
+      content: "♥";
       color: var(--pink);
-      font-size: 0.85em;
+      font-style: normal;
     }
     @keyframes scroll {
       from { transform: translateX(0); }
       to { transform: translateX(-50%); }
     }
 
-    /* ─── MENU — poster panels, not a list ─── */
+    /* ─── MENU ─── */
     .menu {
-      padding: 96px 32px;
+      padding: 120px 32px;
       background: var(--cream);
+      position: relative;
     }
     .menu-inner { max-width: 1280px; margin: 0 auto; }
 
-    .menu-title {
+    .menu-head {
       text-align: center;
-      margin-bottom: 72px;
+      margin-bottom: 80px;
     }
-    .menu-title h2 {
-      font-family: 'Caprasimo', serif;
-      font-size: clamp(56px, 9vw, 144px);
-      line-height: 0.9;
-      letter-spacing: -0.03em;
+    .menu-head .pre {
+      font-family: 'Pinyon Script', cursive;
+      font-size: 56px;
+      color: var(--pink);
+      line-height: 1;
+      transform: rotate(-3deg);
+      display: inline-block;
+      margin-bottom: 8px;
+    }
+    .menu-head h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(56px, 8vw, 124px);
+      line-height: 0.95;
+      letter-spacing: -0.02em;
       color: var(--ink);
     }
-    .menu-title h2 .squiggle {
-      display: inline-block;
-      color: var(--pink);
-      transform: rotate(-4deg);
-    }
-    .menu-title .note {
-      margin-top: 16px;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 14px;
-      font-weight: 600;
-      letter-spacing: 0.14em;
+    .menu-head .heart-rule {
+      margin-top: 24px;
+      display: inline-flex;
+      align-items: center;
+      gap: 16px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.24em;
       text-transform: uppercase;
       color: var(--ink-soft);
     }
+    .menu-head .heart-rule::before,
+    .menu-head .heart-rule::after {
+      content: "";
+      width: 36px;
+      height: 1px;
+      background: var(--ink);
+      opacity: 0.3;
+    }
+    .menu-head .heart-rule .heart { color: var(--pink); font-size: 14px; }
 
     .menu-grid {
       display: grid;
@@ -311,389 +354,472 @@
     }
 
     .panel {
-      border: 3px solid var(--ink);
-      padding: 36px 32px;
+      padding: 40px 36px;
       position: relative;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      min-height: 320px;
-      transition: transform 0.2s ease;
+      min-height: 340px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      border-radius: 8px;
     }
-    .panel:hover { transform: translate(-3px, -3px); box-shadow: 8px 8px 0 var(--ink); }
+    .panel:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(236, 41, 134, 0.18); }
 
-    .panel-num {
-      position: absolute;
-      top: -20px;
-      left: -20px;
-      width: 56px;
-      height: 56px;
-      background: var(--ink);
-      color: var(--cream);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Caprasimo', serif;
-      font-size: 22px;
-    }
-
-    .panel-name {
-      font-family: 'Caprasimo', serif;
-      font-size: clamp(28px, 3.2vw, 44px);
+    .panel-tag {
+      font-family: 'Pinyon Script', cursive;
+      font-size: 28px;
       line-height: 1;
-      letter-spacing: -0.02em;
+      color: var(--pink);
+      margin-bottom: 12px;
+      transform: rotate(-2deg);
+      display: inline-block;
+    }
+    .panel-name {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(28px, 3.2vw, 42px);
+      line-height: 1.05;
+      letter-spacing: -0.01em;
       margin-bottom: 18px;
     }
     .panel-desc {
-      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-family: 'Inter', sans-serif;
       font-size: 15px;
-      line-height: 1.6;
-      color: var(--ink);
-      margin-bottom: 24px;
+      line-height: 1.65;
+      margin-bottom: 28px;
       flex: 1;
     }
     .panel-price {
-      font-family: 'Caprasimo', serif;
+      font-family: 'DM Serif Display', serif;
       font-size: 30px;
       line-height: 1;
       letter-spacing: -0.02em;
       display: inline-flex;
       align-items: baseline;
-      gap: 8px;
+      gap: 10px;
     }
     .panel-price small {
-      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-family: 'Inter', sans-serif;
       font-size: 11px;
       font-weight: 700;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
       color: var(--ink-soft);
     }
 
-    /* Asymmetric grid placement */
-    .p1 { grid-column: 1 / span 7; background: var(--pink-tt); }
-    .p2 { grid-column: 8 / span 5; background: var(--yellow); }
-    .p3 { grid-column: 1 / span 4; background: var(--pink); color: var(--ink); }
-    .p4 { grid-column: 5 / span 4; background: var(--cream); }
-    .p5 { grid-column: 9 / span 4; background: var(--yellow-tt); }
-    .p6 { grid-column: 1 / span 12; background: var(--ink); color: var(--yellow); }
-    .p6 .panel-num { background: var(--yellow); color: var(--ink); }
-    .p6 .panel-desc { color: rgba(255,255,255,0.85); }
-    .p6 .panel-price small { color: var(--yellow); opacity: 0.7; }
-    .p6 { flex-direction: row; align-items: center; gap: 48px; min-height: 200px; padding: 48px 56px; }
-    .p6 .panel-name { font-size: clamp(36px, 4.5vw, 64px); margin-bottom: 12px; }
-    .p6 .panel-desc { margin-bottom: 0; flex: 2; }
-    .p6 .panel-price { flex-shrink: 0; font-size: 44px; }
+    /* Asymmetric panel placement + alternating bg */
+    .p1 { grid-column: 1 / span 7; background: var(--pink); color: var(--cream); border: 2px solid var(--pink); }
+    .p1 .panel-tag { color: var(--cream); }
+    .p1 .panel-price small { color: rgba(255,248,240,0.7); }
+    .p2 { grid-column: 8 / span 5; background: var(--pink-soft); border: 2px solid var(--pink); }
+    .p3 { grid-column: 1 / span 5; background: var(--cream); border: 2px solid var(--ink); }
+    .p4 { grid-column: 6 / span 7; background: var(--ink); color: var(--cream); border: 2px solid var(--ink); }
+    .p4 .panel-tag { color: var(--pink); }
+    .p4 .panel-price small { color: rgba(255,248,240,0.7); }
+    .p5 { grid-column: 1 / span 7; background: var(--pink-soft); border: 2px solid var(--pink); }
+    .p6 { grid-column: 8 / span 5; background: var(--pink); color: var(--cream); border: 2px solid var(--pink); }
+    .p6 .panel-tag { color: var(--cream); }
+    .p6 .panel-price small { color: rgba(255,248,240,0.7); }
 
-    /* ─── STORY — magazine spread, single column ─── */
+    /* ─── STORY ─── */
     .story {
-      padding: 120px 32px;
-      background: var(--pink);
-      color: var(--ink);
+      padding: 130px 32px;
+      background: var(--cream);
       position: relative;
       overflow: hidden;
     }
-    .story-yellow-dot {
+    .story::before {
+      content: "♥";
       position: absolute;
-      top: 80px;
-      right: -120px;
-      width: 360px;
-      height: 360px;
-      background: var(--yellow);
-      border-radius: 50%;
+      top: 60px;
+      right: 8%;
+      font-size: 280px;
+      color: var(--pink-soft);
+      line-height: 1;
+      z-index: 0;
+    }
+    .story::after {
+      content: "♥";
+      position: absolute;
+      bottom: 40px;
+      left: 6%;
+      font-size: 180px;
+      color: var(--pink-soft);
+      line-height: 1;
       z-index: 0;
     }
     .story-inner {
-      max-width: 980px;
+      max-width: 920px;
       margin: 0 auto;
       position: relative;
       z-index: 1;
+      text-align: center;
     }
-    .story-eyebrow {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      margin-bottom: 28px;
+    .story .pre {
+      font-family: 'Pinyon Script', cursive;
+      font-size: 48px;
+      color: var(--pink);
+      line-height: 1;
+      transform: rotate(-3deg);
       display: inline-block;
-      background: var(--ink);
-      color: var(--yellow);
-      padding: 6px 14px;
+      margin-bottom: 12px;
     }
     .story h2 {
-      font-family: 'Caprasimo', serif;
-      font-size: clamp(56px, 8vw, 132px);
-      line-height: 0.88;
-      letter-spacing: -0.03em;
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(48px, 6vw, 84px);
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      color: var(--ink);
       margin-bottom: 48px;
     }
     .story h2 em {
-      font-style: normal;
-      background: var(--yellow);
-      padding: 0 12px;
-      box-shadow: 4px 4px 0 var(--ink);
-      display: inline-block;
-      transform: rotate(-1deg);
+      font-style: italic;
+      color: var(--pink);
     }
     .story p {
-      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-family: 'Inter', sans-serif;
       font-size: 19px;
-      line-height: 1.65;
+      line-height: 1.75;
       max-width: 720px;
-      margin-bottom: 22px;
-      font-weight: 400;
+      margin: 0 auto 22px;
+      color: var(--ink);
     }
     .story-sig {
       margin-top: 40px;
-      font-family: 'Caprasimo', serif;
-      font-size: 36px;
-      letter-spacing: -0.02em;
+      font-family: 'Pinyon Script', cursive;
+      font-size: 64px;
+      color: var(--pink);
+      line-height: 1;
+      transform: rotate(-3deg);
       display: inline-block;
-      transform: rotate(-2deg);
     }
-    .story-sig .underline {
-      background: linear-gradient(transparent 80%, var(--yellow) 80%, var(--yellow) 95%, transparent 95%);
+    .story-sig-meta {
+      display: block;
+      margin-top: 12px;
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      transform: rotate(0deg);
     }
 
-    /* ─── 5-STAR POSTER (big yellow callout, no fake testimonials) ─── */
-    .stars {
-      padding: 0 32px;
-      background: var(--cream);
+    /* ─── WORTH IT (black contrast block, inspired by Worth The Rip) ─── */
+    .worth {
+      background: var(--ink);
+      color: var(--cream);
+      padding: 120px 32px;
+      position: relative;
+      overflow: hidden;
     }
-    .stars-inner {
-      max-width: 1280px;
+    .worth-inner {
+      max-width: 1100px;
       margin: 0 auto;
-      background: var(--yellow);
-      border: 3px solid var(--ink);
-      padding: 80px 56px;
       text-align: center;
       position: relative;
-      transform: translateY(-40px);
-      box-shadow: 12px 12px 0 var(--ink);
+      z-index: 1;
     }
-    .stars-number {
-      font-family: 'Caprasimo', serif;
-      font-size: clamp(120px, 22vw, 320px);
-      line-height: 0.85;
-      letter-spacing: -0.05em;
-      color: var(--ink);
+    .worth-script {
+      font-family: 'Pinyon Script', cursive;
+      font-size: clamp(72px, 9vw, 140px);
+      line-height: 0.95;
+      color: var(--pink);
+      transform: rotate(-4deg);
+      display: inline-block;
+      margin-bottom: -20px;
     }
-    .stars-row {
-      font-size: 32px;
-      letter-spacing: 0.2em;
-      color: var(--ink);
-      margin: 16px 0 8px;
-    }
-    .stars-label {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 14px;
-      font-weight: 700;
-      letter-spacing: 0.18em;
+    .worth-serif {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(72px, 12vw, 180px);
+      line-height: 0.9;
+      letter-spacing: 0.02em;
+      color: var(--cream);
       text-transform: uppercase;
-      color: var(--ink);
+      display: block;
+    }
+    .worth-drip {
+      display: inline-block;
+      color: var(--gold);
+      font-size: 0.4em;
+      vertical-align: super;
+      margin-left: 0.05em;
+      transform: rotate(8deg);
+    }
+    .worth-sub {
+      margin-top: 36px;
+      font-family: 'DM Serif Display', serif;
+      font-style: italic;
+      font-size: clamp(20px, 2.4vw, 32px);
+      line-height: 1.4;
+      color: var(--cream);
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .worth-meta {
+      margin-top: 40px;
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    /* ─── PROOF ─── */
+    .proof {
+      padding: 110px 32px;
+      background: var(--pink-mist);
+      text-align: center;
+    }
+    .proof-inner {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .proof .pre {
+      font-family: 'Pinyon Script', cursive;
+      font-size: 48px;
+      color: var(--pink);
+      line-height: 1;
+      transform: rotate(-3deg);
+      display: inline-block;
+      margin-bottom: 8px;
+    }
+    .proof-number {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(140px, 22vw, 280px);
+      line-height: 0.85;
+      letter-spacing: -0.04em;
+      color: var(--pink);
+    }
+    .proof-stars {
+      font-size: 32px;
+      letter-spacing: 0.24em;
+      color: var(--pink);
+      margin: 12px 0 16px;
+    }
+    .proof-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
       margin-bottom: 36px;
     }
-    .stars-link {
-      display: inline-block;
-      font-family: 'Plus Jakarta Sans', sans-serif;
+    .proof-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Inter', sans-serif;
       font-size: 13px;
       font-weight: 700;
       letter-spacing: 0.08em;
       text-transform: uppercase;
       background: var(--ink);
-      color: var(--yellow);
-      padding: 14px 28px;
+      color: var(--cream);
+      padding: 16px 28px;
       border-radius: 999px;
       transition: background 0.18s;
     }
-    .stars-link:hover { background: var(--pink); color: var(--ink); }
+    .proof-link:hover { background: var(--pink); }
 
-    /* ─── BOOK PANEL — full-bleed pink poster ─── */
+    /* ─── BOOK CTA ─── */
     .book {
-      padding: 80px 32px 120px;
-      background: var(--cream);
-    }
-    .book-inner {
-      max-width: 1280px;
-      margin: 0 auto;
-      background: var(--ink);
+      background: var(--pink);
       color: var(--cream);
-      padding: 80px 64px;
-      border: 3px solid var(--ink);
+      padding: 130px 32px;
       position: relative;
       overflow: hidden;
     }
-    .book-pink-blob {
+    .book::before {
+      content: "♥";
       position: absolute;
-      bottom: -200px;
-      left: -100px;
-      width: 480px;
-      height: 480px;
-      background: var(--pink);
-      border-radius: 50%;
-      opacity: 0.4;
-      z-index: 0;
+      top: -40px;
+      left: -20px;
+      font-size: 300px;
+      color: rgba(255,248,240,0.08);
+      line-height: 1;
     }
-    .book-yellow-blob {
+    .book::after {
+      content: "♥";
       position: absolute;
-      top: -120px;
-      right: -80px;
-      width: 360px;
-      height: 360px;
-      background: var(--yellow);
-      border-radius: 50%;
-      opacity: 0.25;
-      z-index: 0;
+      bottom: -80px;
+      right: -20px;
+      font-size: 380px;
+      color: rgba(255,248,240,0.08);
+      line-height: 1;
     }
-    .book-content {
+    .book-inner {
+      max-width: 1100px;
+      margin: 0 auto;
       position: relative;
       z-index: 1;
+      text-align: center;
+    }
+    .book .pre {
+      font-family: 'Pinyon Script', cursive;
+      font-size: 64px;
+      color: var(--cream);
+      line-height: 1;
+      transform: rotate(-4deg);
+      display: inline-block;
+      margin-bottom: 4px;
     }
     .book h2 {
-      font-family: 'Caprasimo', serif;
-      font-size: clamp(64px, 11vw, 180px);
-      line-height: 0.85;
-      letter-spacing: -0.04em;
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(64px, 10vw, 160px);
+      line-height: 0.9;
+      letter-spacing: -0.02em;
       margin-bottom: 32px;
     }
-    .book h2 .pink { color: var(--pink); }
-    .book h2 .yellow {
-      background: var(--yellow);
+    .book h2 .zero {
       color: var(--ink);
-      padding: 0 16px;
+      font-style: italic;
       display: inline-block;
-      transform: rotate(-1.5deg);
+      transform: rotate(-8deg);
     }
     .book-tag {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 19px;
-      line-height: 1.6;
-      max-width: 580px;
-      margin-bottom: 48px;
-      color: rgba(255, 251, 240, 0.85);
+      font-family: 'DM Serif Display', serif;
+      font-style: italic;
+      font-size: clamp(20px, 2.4vw, 28px);
+      line-height: 1.5;
+      color: var(--cream);
+      max-width: 620px;
+      margin: 0 auto 48px;
     }
     .book-btn {
       display: inline-flex;
       align-items: center;
-      gap: 18px;
-      background: var(--yellow);
+      gap: 16px;
+      background: var(--cream);
       color: var(--ink);
       padding: 22px 44px;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 17px;
-      font-weight: 800;
-      letter-spacing: 0.04em;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
       border-radius: 999px;
-      transition: transform 0.18s, background 0.18s;
+      transition: transform 0.18s, background 0.18s, color 0.18s;
     }
     .book-btn:hover {
-      background: var(--pink);
-      transform: translateX(6px);
+      background: var(--ink);
+      color: var(--cream);
+      transform: translateY(-3px);
     }
-    .book-btn .arrow {
-      font-family: 'Caprasimo', serif;
-      font-size: 24px;
-    }
+    .book-btn .heart { color: var(--pink); }
+    .book-btn:hover .heart { color: var(--pink); }
 
     .book-meta {
       display: flex;
-      gap: 48px;
+      gap: 56px;
+      justify-content: center;
       flex-wrap: wrap;
       margin-top: 64px;
-      padding-top: 32px;
-      border-top: 1px solid rgba(255, 251, 240, 0.2);
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 14px;
-      color: rgba(255, 251, 240, 0.7);
+      padding-top: 36px;
+      border-top: 1px solid rgba(255, 248, 240, 0.25);
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      color: rgba(255,248,240,0.85);
+    }
+    .book-meta span {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      text-align: center;
     }
     .book-meta span strong {
-      display: block;
-      font-family: 'Caprasimo', serif;
+      font-family: 'DM Serif Display', serif;
       font-size: 22px;
-      letter-spacing: -0.01em;
-      color: var(--yellow);
-      margin-bottom: 2px;
       font-weight: 400;
+      letter-spacing: -0.01em;
+      color: var(--cream);
     }
+    .book-meta .heart { color: var(--cream); margin: 0 6px; }
 
-    /* ─── FOOTER — tiny, not a wordmark moment ─── */
+    /* ─── FOOTER ─── */
     footer {
       background: var(--cream);
-      padding: 28px 32px 32px;
+      padding: 26px 32px 30px;
       font-size: 12px;
       color: var(--ink-soft);
       display: flex;
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
-      gap: 16px;
-      border-top: 1px solid rgba(0,0,0,0.08);
+      gap: 14px;
     }
+    footer a:hover { color: var(--pink); }
+    footer .heart { color: var(--pink); }
 
     /* ─── RESPONSIVE ─── */
     @media (max-width: 960px) {
-      .top { padding: 18px 20px; }
-      .top-meta { gap: 16px; font-size: 12px; }
-      .top-meta a:nth-child(1) { display: none; }
-      .hero { padding: 32px 20px 60px; }
-      .blob { width: 320px; height: 320px; top: -40px; left: -60px; }
-      .blob-2 { width: 200px; height: 200px; right: -80px; top: 280px; }
-      .sticker-1 { width: 96px; height: 96px; font-size: 10px; right: 4%; top: 60px; }
-      .sticker-2 { font-size: 11px; top: auto; bottom: 80px; right: 4%; }
-      .ticker-track { font-size: 18px; }
-      .menu { padding: 64px 20px; }
-      .menu-title { margin-bottom: 48px; }
-      .menu-grid { grid-template-columns: 1fr; gap: 28px; }
-      .panel { min-height: 240px; padding: 28px 24px; }
-      .panel-num { width: 44px; height: 44px; font-size: 18px; top: -16px; left: -12px; }
+      .top { padding: 16px 20px; }
+      .top-meta { gap: 14px; font-size: 12px; }
+      .top-meta a:first-of-type { display: none; }
+      .hero { padding: 40px 20px 80px; }
+      .hero-mark { font-size: 60px; top: 0; right: 4%; }
+      .hero-actions { width: 100%; }
+      .btn-cream, .btn-ghost-light { flex: 1; justify-content: center; }
+      .ticker-track { font-size: 18px; gap: 24px; }
+      .ticker-track span { gap: 24px; }
+      .menu { padding: 80px 20px; }
+      .menu-head { margin-bottom: 56px; }
+      .menu-head .pre { font-size: 40px; }
+      .menu-grid { grid-template-columns: 1fr; gap: 20px; }
+      .panel { min-height: 260px; padding: 32px 28px; }
       .p1, .p2, .p3, .p4, .p5, .p6 { grid-column: 1 / -1; }
-      .p6 { flex-direction: column; gap: 20px; align-items: flex-start; padding: 32px 28px; }
-      .p6 .panel-price { font-size: 32px; }
       .story { padding: 80px 20px; }
-      .story-yellow-dot { width: 200px; height: 200px; right: -80px; top: 40px; }
-      .stars-inner { padding: 48px 24px; transform: translateY(-28px); box-shadow: 6px 6px 0 var(--ink); }
-      .book { padding: 56px 20px 80px; }
-      .book-inner { padding: 52px 28px; }
-      .book-btn { padding: 18px 32px; font-size: 15px; }
-      .book-meta { gap: 24px; }
+      .story::before { font-size: 160px; top: 20px; }
+      .story::after { font-size: 100px; }
+      .worth { padding: 80px 20px; }
+      .proof { padding: 72px 20px; }
+      .book { padding: 90px 20px; }
+      .book-meta { gap: 28px; margin-top: 48px; }
+      .book-btn { padding: 18px 32px; font-size: 13px; }
       .float-book { padding: 14px 22px; font-size: 12px; bottom: 16px; right: 16px; }
-      footer { padding: 24px 20px; flex-direction: column; text-align: center; }
+      footer { flex-direction: column; text-align: center; padding: 22px 20px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- TINY HEADER (no nav) -->
+  <!-- TOP -->
   <header class="top">
     <a href="#" class="top-brand">B<span class="zero">0</span>ld Beauty</a>
     <div class="top-meta">
       <span>Lawrenceville, GA</span>
+      <span class="heart">♥</span>
       <a href="https://instagram.com/b0ldbeautybytaychanel" target="_blank">@b0ldbeautybytaychanel</a>
     </div>
   </header>
 
   <!-- HERO -->
   <section class="hero">
+    <div class="hero-mark" aria-hidden="true">xoxo</div>
+    <div class="hero-blob" aria-hidden="true"></div>
     <div class="hero-inner">
-      <div class="blob" aria-hidden="true"></div>
-      <div class="blob-2" aria-hidden="true"></div>
 
-      <div class="sticker sticker-1" aria-hidden="true">
-        Now<br>Booking<br>★★★★★
-      </div>
-      <div class="sticker sticker-2" aria-hidden="true">
-        ✦ Private Suite
+      <div class="hero-eyebrow">
+        <span class="heart">♥</span> Lawrenceville's Beauty Suite
       </div>
 
-      <h1>B<span class="zero">0</span>ld.</h1>
-      <div class="hero-sub">Beauty done <span class="accent">your way.</span></div>
+      <h1 class="hero-h1">
+        <span class="script-word">Hello,</span><br>B<span class="zero">0</span>ld.
+      </h1>
 
-      <div class="hero-bottom">
-        Lashes, brows, waxing &amp; skin — in a private fuchsia suite in <strong>Lawrenceville, GA</strong>. One artist. One client at a time. Built around the work, not the rush.
+      <div class="hero-tag">Beauty that knows what it wants — and shows up looking like it.</div>
+
+      <div class="hero-body">
+        Lashes, brows, waxing &amp; skin in a private pink suite. One artist, one client at a time, every appointment built around you. By Tay Chanel.
       </div>
+
+      <div class="hero-actions">
+        <a href="https://taylorbrightwell.glossgenius.com" class="btn-cream">Book a Visit <span style="color: var(--pink);">♥</span></a>
+        <a href="#menu" class="btn-ghost-light">See the Menu</a>
+      </div>
+
     </div>
   </section>
 
@@ -702,14 +828,14 @@
     <div class="ticker-track">
       <span>Lashes</span>
       <span>Brows</span>
-      <span>Wax</span>
-      <span>Skin</span>
+      <span>Waxing</span>
+      <span>Facials</span>
       <span>By Tay Chanel</span>
       <span>Lawrenceville, GA</span>
       <span>Lashes</span>
       <span>Brows</span>
-      <span>Wax</span>
-      <span>Skin</span>
+      <span>Waxing</span>
+      <span>Facials</span>
       <span>By Tay Chanel</span>
       <span>Lawrenceville, GA</span>
     </div>
@@ -719,65 +845,66 @@
   <section class="menu" id="menu">
     <div class="menu-inner">
 
-      <div class="menu-title">
-        <h2>The <span class="squiggle">Menu.</span></h2>
-        <div class="note">★ Six Services · One Artist ★</div>
+      <div class="menu-head">
+        <div class="pre">the</div>
+        <h2>Menu.</h2>
+        <div class="heart-rule">Six Services <span class="heart">♥</span> One Artist</div>
       </div>
 
       <div class="menu-grid">
 
         <div class="panel p1">
-          <div class="panel-num">1</div>
+          <div class="panel-tag">soft &amp; fluttery</div>
           <div>
-            <div class="panel-name">Lash<br>Extensions</div>
-            <div class="panel-desc">Classic, hybrid &amp; volume sets mapped to your eye shape. Lightweight enough you'll forget they're there — until someone tells you.</div>
+            <div class="panel-name">Lash Extensions</div>
+            <div class="panel-desc">Classic, hybrid &amp; volume sets mapped to your eye shape. Lightweight enough you'll forget they're there — until someone tells you they look incredible.</div>
           </div>
           <div class="panel-price">$145+<small>Full Set</small></div>
         </div>
 
         <div class="panel p2">
-          <div class="panel-num">2</div>
+          <div class="panel-tag">keep the look</div>
           <div>
             <div class="panel-name">Lash Fills</div>
-            <div class="panel-desc">Two- and three-week refills that keep the set looking the way it did walking out the door.</div>
+            <div class="panel-desc">Two- and three-week refills to keep your set looking the way it did walking out the door.</div>
           </div>
           <div class="panel-price">$65+<small>Refill</small></div>
         </div>
 
         <div class="panel p3">
-          <div class="panel-num">3</div>
+          <div class="panel-tag">fluffy &amp; full</div>
           <div>
-            <div class="panel-name">Brow<br>Lamination</div>
-            <div class="panel-desc">Fluffier, fuller, fixed-in-place. 6–8 weeks of brows that wake up looking like they tried.</div>
+            <div class="panel-name">Brow Lamination</div>
+            <div class="panel-desc">Six to eight weeks of brows that wake up looking like they tried. Shaped, tinted, and finished to frame your face.</div>
           </div>
           <div class="panel-price">$90+<small>Lam + Tint</small></div>
         </div>
 
         <div class="panel p4">
-          <div class="panel-num">4</div>
+          <div class="panel-tag">worth the rip</div>
           <div>
-            <div class="panel-name">Brazilian Wax</div>
-            <div class="panel-desc">Fast, clean, judgment-free. Hard wax, premium prep, the technique that gets clients on a schedule.</div>
+            <div class="panel-name">Brazilian Waxing</div>
+            <div class="panel-desc">Fast, clean, judgment-free. Hard wax, premium prep, the technique that gets clients on a permanent schedule.</div>
           </div>
           <div class="panel-price">$65+<small>Brazilian</small></div>
         </div>
 
         <div class="panel p5">
-          <div class="panel-num">5</div>
+          <div class="panel-tag">glow up</div>
           <div>
             <div class="panel-name">Custom Facials</div>
-            <div class="panel-desc">Built around your skin — glow, hydration, breakouts, maintenance. Not a one-size-fits-all menu.</div>
+            <div class="panel-desc">Built around your skin's real concerns — hydration, glow, breakouts, maintenance. Not a one-size-fits-all menu.</div>
           </div>
           <div class="panel-price">$95+<small>Signature</small></div>
         </div>
 
         <div class="panel p6">
-          <div class="panel-num">6</div>
-          <div style="flex: 1.5;">
+          <div class="panel-tag">smooth reset</div>
+          <div>
             <div class="panel-name">Dermaplaning</div>
-            <div class="panel-desc">A smooth, peach-fuzz-free reset that primes the skin for makeup, glow, and every facial that follows.</div>
+            <div class="panel-desc">A smooth, peach-fuzz-free reset that primes the skin for makeup and every facial that follows.</div>
           </div>
-          <div class="panel-price">$75+<small>Single Session</small></div>
+          <div class="panel-price">$75+<small>Single</small></div>
         </div>
 
       </div>
@@ -786,64 +913,67 @@
 
   <!-- STORY -->
   <section class="story" id="story">
-    <div class="story-yellow-dot" aria-hidden="true"></div>
     <div class="story-inner">
 
-      <div class="story-eyebrow">Meet the artist</div>
+      <div class="pre">meet</div>
+      <h2>Tay <em>Chanel.</em></h2>
 
-      <h2>Hi, I'm <em>Tay.</em></h2>
+      <p>B0ld Beauty started with a simple idea — a place in Lawrenceville where women could come exactly as they are, and leave exactly as they want to be seen. A vibrant pink suite. No waiting-room small talk. No rushed appointments.</p>
 
-      <p>B0ld Beauty started with a simple idea — a place in Lawrenceville where women could come exactly as they are, and leave exactly as they want to be seen. A fuchsia suite. No waiting-room small talk. No rushed appointments.</p>
+      <p>Every service is mine from start to finish. Brows, lashes, wax, skin — all under one roof, all built around the details that don't get rushed and don't get skipped. You're not booking a service. You're booking time that's all yours.</p>
 
-      <p>Every service is mine from start to finish. Brows, lashes, wax, skin — all in one room, all built around the details that don't get rushed and don't get skipped. You aren't booking a service. You're booking time that's all yours.</p>
+      <div class="story-sig">xoxo, Tay</div>
+      <span class="story-sig-meta">Founder &middot; Licensed Esthetician &middot; Lawrenceville, GA</span>
 
-      <div class="story-sig"><span class="underline">— Tay Chanel</span></div>
     </div>
   </section>
 
-  <!-- STARS / PROOF -->
-  <section class="stars">
-    <div class="stars-inner">
-      <div class="stars-number">5.0</div>
-      <div class="stars-row">★ ★ ★ ★ ★</div>
-      <div class="stars-label">Every Review · Every Time</div>
-      <a href="https://www.google.com/search?q=B0ld+Beauty+by+Tay+Chanel+Lawrenceville" class="stars-link" target="_blank" rel="noopener">Read on Google →</a>
+  <!-- WORTH IT -->
+  <section class="worth">
+    <div class="worth-inner">
+      <div class="worth-script">worth</div>
+      <div class="worth-serif">the rip<span class="worth-drip">✦</span></div>
+      <div class="worth-sub">Real results, real reviews, repeat clients. The kind of appointment you book back-to-back before you leave the chair.</div>
+      <div class="worth-meta">★ ★ ★ ★ ★ &nbsp;·&nbsp; Lawrenceville's Beauty Suite</div>
+    </div>
+  </section>
+
+  <!-- PROOF -->
+  <section class="proof">
+    <div class="proof-inner">
+      <div class="pre">loved by</div>
+      <div class="proof-number">5.0</div>
+      <div class="proof-stars">★ ★ ★ ★ ★</div>
+      <div class="proof-label">Every review &middot; Every time</div>
+      <a href="https://www.google.com/search?q=B0ld+Beauty+by+Tay+Chanel+Lawrenceville" class="proof-link" target="_blank" rel="noopener">Read on Google ↗</a>
     </div>
   </section>
 
   <!-- BOOK -->
   <section class="book">
     <div class="book-inner">
-      <div class="book-pink-blob" aria-hidden="true"></div>
-      <div class="book-yellow-blob" aria-hidden="true"></div>
-      <div class="book-content">
+      <div class="pre">let's get</div>
+      <h2>B<span class="zero">0</span>ld.</h2>
+      <div class="book-tag">Pick your service, lock your slot, and we'll see you in the chair. Online booking, 24/7 — no calls, no DMs, no waiting on a reply.</div>
+      <a href="https://taylorbrightwell.glossgenius.com" class="book-btn">Book Now <span class="heart">♥</span></a>
 
-        <h2>Let's get<br><span class="yellow">b<span class="pink" style="font-style:italic; display:inline-block; transform: rotate(-8deg); color: var(--pink);">0</span>ld.</span></h2>
-
-        <p class="book-tag">Pick your service, lock your slot, and we'll see you in the chair. Online booking is open 24/7 — no calls, no DMs, no waiting on a reply.</p>
-
-        <a href="https://taylorbrightwell.glossgenius.com" class="book-btn">Book Online <span class="arrow">↗</span></a>
-
-        <div class="book-meta">
-          <span><strong>Lawrenceville, GA</strong>Address shared on booking</span>
-          <span><strong>By Appointment</strong>One client at a time</span>
-          <span><strong>@b0ldbeautybytaychanel</strong>See the latest work</span>
-        </div>
-
+      <div class="book-meta">
+        <span><strong>Lawrenceville, GA</strong>Address shared on booking</span>
+        <span><strong>By Appointment</strong>One client at a time</span>
+        <span><strong>@b0ldbeautybytaychanel</strong>Follow the work</span>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER (minimal) -->
+  <!-- FOOTER -->
   <footer>
-    <span>© 2026 B0ld Beauty by Tay Chanel</span>
-    <span>Lawrenceville, GA · <a href="https://taylorbrightwell.glossgenius.com" style="color: var(--pink-dk);">Book Online</a></span>
+    <span>© 2026 B0ld Beauty by Tay Chanel <span class="heart">♥</span></span>
+    <span>Lawrenceville, GA &middot; <a href="https://taylorbrightwell.glossgenius.com" style="color: var(--pink);">Book Online</a></span>
   </footer>
 
-  <!-- Floating book CTA — replaces traditional nav -->
+  <!-- FLOATING BOOK -->
   <a href="https://taylorbrightwell.glossgenius.com" class="float-book">
-    <span class="dot"></span>
-    Book Now
+    <span class="heart">♥</span> Book Now
   </a>
 
 </body>
