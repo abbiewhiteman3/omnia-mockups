@@ -222,15 +222,21 @@
   }
 
   .about-image {
-    background: var(--mauve);
+    background: var(--mauve-light);
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px;
   }
 
   .about-image img {
     width: 100%;
-    height: 100%;
+    max-width: 420px;
+    height: auto;
     object-fit: cover;
     display: block;
+    border-radius: 2px;
   }
 
   .about-image-placeholder {
@@ -296,7 +302,7 @@
 
   .services-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 2px;
     max-width: 1100px;
     margin: 0 auto;
@@ -304,33 +310,24 @@
 
   .service-card {
     background: var(--white);
-    padding: 36px 28px;
+    padding: 52px 40px;
     text-align: center;
   }
 
-  .service-icon {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 32px;
-    font-style: italic;
-    color: var(--sage);
-    margin-bottom: 12px;
-    display: block;
-  }
-
   .service-name {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 500;
     letter-spacing: 0.15em;
     text-transform: uppercase;
     color: var(--charcoal);
-    margin-bottom: 8px;
+    margin-bottom: 12px;
   }
 
   .service-desc {
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 300;
     color: #7A7A74;
-    line-height: 1.6;
+    line-height: 1.7;
   }
 
   /* DIVIDER */
@@ -461,6 +458,69 @@
   }
 
   .btn-artist:hover { color: var(--sage-dark); border-color: var(--sage-dark); }
+
+  /* PROCESS */
+  .process {
+    background: var(--cream);
+    padding: 96px 48px;
+  }
+
+  .process-header {
+    text-align: center;
+    margin-bottom: 64px;
+  }
+
+  .process-sub {
+    font-size: 15px;
+    font-weight: 300;
+    color: #5A5A56;
+    max-width: 480px;
+    margin: 16px auto 0;
+    line-height: 1.8;
+  }
+
+  .process-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .process-step {
+    background: var(--mauve-light);
+    padding: 40px 32px;
+  }
+
+  .step-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    font-style: italic;
+    font-weight: 300;
+    color: var(--sage);
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  .step-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 12px;
+    color: var(--charcoal);
+  }
+
+  .step-body {
+    font-size: 14px;
+    font-weight: 300;
+    color: #5A5A56;
+    line-height: 1.8;
+  }
+
+  @media (max-width: 768px) {
+    .process { padding: 64px 24px; }
+    .process-steps { grid-template-columns: 1fr 1fr; }
+  }
 
   /* STUDIO CTA */
   .studio-cta {
@@ -608,7 +668,7 @@
   <div class="hero-left">
     <p class="hero-eyebrow">Salt Lake City · Est. 2026</p>
     <h1 class="hero-title">A space where beauty <em>becomes a ritual.</em></h1>
-    <p class="hero-sub">Three independent artists. One thoughtfully designed studio. Brows, lashes, permanent makeup, and all the rituals in between.</p>
+    <p class="hero-sub">Three independent artists. One thoughtfully designed studio. Come as you are — leave feeling like yourself, just a little more so.</p>
     <div class="hero-actions">
       <a href="#team" class="btn-primary">Meet the Artists</a>
       <a href="#about" class="btn-outline">Our Story</a>
@@ -634,8 +694,9 @@
     <h2 class="section-title">Built for artists who care about <em>their craft.</em></h2>
     <p class="section-body">Velvet Rose was founded by Kenzie — a permanent makeup artist, esthetician, and cosmetic tattoo artist who wanted a beauty space that felt as considered as the work happening inside it.</p>
     <p class="section-body" style="margin-top:16px;">Every artist here runs their own books, sets their own hours, and brings their own clientele. What we share is the room: soft light, warm details, and a quiet that's rare in a beauty studio.</p>
-    <p class="section-body" style="margin-top:16px;">If you're a guest, you'll find a calm place to land before your appointment. If you're an artist looking for a chair, you'll find a community.</p>
-    <p style="margin-top:28px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;color:var(--sage-dark);">— Kenzie</p>
+    <p class="section-body" style="margin-top:16px;">If you're a guest, you'll find a calm place to land. If you're looking for a chair, you'll find a community.</p>
+    <p style="margin-top:28px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:19px;color:var(--sage-dark);line-height:1.5;">Soft. Considered. <em>Always yours.</em></p>
+    <p style="margin-top:8px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;color:#888;">— Kenzie</p>
   </div>
 </section>
 
@@ -647,24 +708,16 @@
   </div>
   <div class="services-grid">
     <div class="service-card">
-      <span class="service-icon">PMU</span>
       <p class="service-name">Permanent Makeup</p>
       <p class="service-desc">Microblading, nano brows, lip blush, lash line enhancement.</p>
     </div>
     <div class="service-card">
-      <span class="service-icon">✦</span>
       <p class="service-name">Brows</p>
       <p class="service-desc">Lamination, shaping, waxing, and tinting.</p>
     </div>
     <div class="service-card">
-      <span class="service-icon">~</span>
       <p class="service-name">Lashes</p>
       <p class="service-desc">Lash lifts, tints, and extensions.</p>
-    </div>
-    <div class="service-card">
-      <span class="service-icon">○</span>
-      <p class="service-name">Consultations</p>
-      <p class="service-desc">Complimentary 15-minute consultations with any artist.</p>
     </div>
   </div>
 </section>
