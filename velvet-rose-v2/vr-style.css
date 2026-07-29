@@ -504,6 +504,59 @@
 
   .btn-artist:hover { color: var(--sage-dark); border-color: var(--sage-dark); }
 
+  /* ARTISTS PAGE GRID (flex so 4-5 cards center nicely, last row too) */
+  .artists-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 28px;
+    max-width: 1120px;
+    margin: 0 auto;
+  }
+
+  .artists-grid .artist-card {
+    flex: 0 1 328px;
+    border: 1px solid rgba(92, 110, 82, 0.12);
+    box-shadow: 0 1px 4px rgba(44, 44, 42, 0.05);
+    border-radius: 2px;
+  }
+
+  /* HOMEPAGE ARTIST TEASER (avatar row -> full artists page) */
+  .artist-avatars {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin: 8px 0 8px;
+  }
+
+  .artist-avatars a {
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .artist-avatars .avatar {
+    width: 92px;
+    height: 92px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+    border: 3px solid var(--white);
+    box-shadow: 0 2px 8px rgba(44, 44, 42, 0.12);
+    display: block;
+    transition: transform 0.2s;
+  }
+
+  .artist-avatars a:hover .avatar { transform: translateY(-3px); }
+
+  .artist-avatars .avatar-name {
+    display: block;
+    margin-top: 10px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+    color: var(--charcoal);
+  }
+
   /* PROCESS */
   .process {
     background: var(--cream);
