@@ -506,19 +506,24 @@
 
   /* ARTISTS PAGE GRID (flex so 4-5 cards center nicely, last row too) */
   .artists-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 28px;
-    max-width: 1120px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+    max-width: 1240px;
     margin: 0 auto;
   }
 
   .artists-grid .artist-card {
-    flex: 0 1 328px;
     border: 1px solid rgba(92, 110, 82, 0.12);
     box-shadow: 0 1px 4px rgba(44, 44, 42, 0.05);
     border-radius: 2px;
+  }
+
+  @media (max-width: 1080px) {
+    .artists-grid { grid-template-columns: repeat(2, 1fr); max-width: 680px; }
+  }
+  @media (max-width: 560px) {
+    .artists-grid { grid-template-columns: 1fr; max-width: 360px; }
   }
 
   /* HOMEPAGE ARTIST TEASER (avatar row -> full artists page) */
