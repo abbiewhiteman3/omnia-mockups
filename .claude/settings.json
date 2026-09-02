@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__Apify_MCP_Server__get-dataset-items",
+      "mcp__Apify_MCP_Server__apify--rag-web-browser",
+      "mcp__Apify_MCP_Server__search-actors",
+      "mcp__Apify_MCP_Server__apify--web-fetch"
+    ]
+  }
+}
